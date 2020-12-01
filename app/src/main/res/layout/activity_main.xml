@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/NomeColaborador"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nome do Colaborador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailColaborador"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="E-mail do Colaborador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomeColaborador" />
+
+    <EditText
+        android:id="@+id/IdadeColaborador"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Idade do Colaborador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telColaborador" />
+
+    <EditText
+        android:id="@+id/telColaborador"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Telefone do Colaborador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailColaborador" />
+
+    <TextView
+        android:id="@+id/txtCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="Cargo do Colaborador"
+        app:layout_constraintBottom_toTopOf="@+id/radioCargo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioCargo"
+        android:layout_width="396dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="28dp"
+        android:baselineAligned="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdadeColaborador">
+
+        <RadioButton
+            android:id="@+id/radioDiretor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diretoria" />
+
+        <RadioButton
+            android:id="@+id/radioAnalistaSr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analista Senior" />
+
+        <RadioButton
+            android:id="@+id/radioAnalistaPl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analista Pleno" />
+
+        <RadioButton
+            android:id="@+id/radioAnalistaJr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analista Junior" />
+
+        <RadioButton
+            android:id="@+id/radioAuxiliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auxiliar" />
+
+        <RadioButton
+            android:id="@+id/radioEstagiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estagiário" />
+
+        <RadioButton
+            android:id="@+id/radioJovemAprendiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jovem Aprendiz" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="403dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioCargo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CONFIRMAR" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
